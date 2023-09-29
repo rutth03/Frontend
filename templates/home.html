@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100&family=Lato:wght@700&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap"
+        rel="styl   esheet">
+    <script src="https://kit.fontawesome.com/774acdc1d6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <main class="interfaz-principal">
+        <nav class="barra-navegacion-servidores">
+            <div class="servidores-utilidades">
+                <div class="servidores" id="agregar-servidor">
+                    <img id="agregar-servidor-img" src="../assets/iconos/add-white.png" alt="agregar servidor">
+                </div>
+                <div class="servidores" id="explorar-servidores"><img id="explorar-servidores-img" src="../assets/iconos/explorar-white.png" alt="buscar servidor"></div>
+            </div>
+            <div class="servidores-del-usuario">
+
+            </div>
+        </nav>
+        <aside class="listado-canales">
+            <div class="agregar-canal">
+                <button id="agregar-canal-boton">
+                    Agregar Canal
+                </button>
+            </div>
+            <div class="header-canales" id="desplegar-canales">
+                <i class="fa-solid fa-chevron-right angulares-activado-desactivado" id="canal-no-desplegado"></i>
+                <i class="fa-solid fa-chevron-down angulares-activado-desactivado" id="canal-desplegado"></i>
+                CANALES DE TEXTO
+            </div>
+            <div class="canales">
+<!--                 <div class="canal">
+                    <i class="fa-solid fa-hashtag hashtag-canales"></i><span>Canal 1</span>
+                    <div class="canal-descripcion">Canal 1 descripcion</div>
+                </div>
+                <div class="canal"><i class="fa-solid fa-hashtag hashtag-canales">
+                    </i><span>Canal 2</span>
+                    <div class="canal-descripcion">Canal 2 descripcion</div>
+                </div> -->
+            </div>
+            <div class="sin-canales-ni-servidor">
+                <div class="imagen-sin-canales"><img src="../assets/imagenes/no-message.png" alt=""></div>
+                <div class="texto-sin-canales">
+                    No hay canales disponibles para comunicarse
+                </div>
+            </div>
+        </aside>
+        <section class="perfil-usuario">
+            <div class="imagen"><img id="img-perfil" src="../assets/avatares/imagen1.png" alt="foto-perfil"></div>
+            <div class="info-usuario">
+                
+                <div class="nombre-usuario">Alvaro</div>
+                <div class="alias-usuario">#pez2909</div>
+            </div>            
+        </section>
+        <!-- CONTENEDOR PARA  Mensaje seleccionar canal -->
+        <div class="accion-requerida-mensaje">
+            <div class="contenedor-imagen-mensaje">
+                <div class="accion-requerida-imagen">
+                    <img src="../assets/avatares/imagen1.png" alt="">
+                </div>
+                <div class="accion-requerida-descripcion">
+                    Selecciona un canal para comenzar a chatear
+                </div>
+            </div>
+        </div>
+        <!-- CONTENEDOR si se selecciona una canal -->
+        <section class="mensajes-usuarios">            
+            <div class="mensajes"></div>
+        </section>
+        <div class="caja-mensajes">
+            <section class="caja-enviar-mensaje">
+                <input id="input-mensaje" type="text" placeholder="Escribe un mensaje...">
+                <button id="boton-enviar"><img id="img-enviar" src="../assets/iconos/send.png" alt="enviarMensaje"></button>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Modal agregar canal -->
+    <section id="modal-canal" class="modal agregar-canal">
+        <div class="modal-container">
+            <h1 class="modal-titulo">Crear Canal</h1>
+            <p>en Nombre Servidor</p>
+            <div class="nombre-input">Nombre del Canal</div>
+            <div class="caja-ingreso">
+                <i class="fa-solid fa-hashtag hashtag-canales"></i>
+                <input type="text" placeholder="nuevo-canal">
+            </div>
+            <span class="msj-advertencia" id="msj-advertencia-canal">Ingresa el nombre del canal</span>
+            <div class="nombre-input">Descripcion del Canal</div>
+            <div class="caja-ingreso">
+                <textarea id="canal-descripcion-textarea" type="text" placeholder="descripcion-canal"></textarea>
+            </div>
+            <div class="seccion-botones-canal">
+                <button id="crear-canal" class="boton-modal modal-agregar">Agregar Canal</button>
+                <button id="cerrar-modal-canal" class="boton-modal modal-cerrar">Cancelar</button>
+            </div>
+        </div>
+    </section>
+    <!-- Modal agregar servidor-->
+    <section id="modal-servidor" class="modal agregar-servidor">
+        <div class="modal-container">
+            <h1 class="modal-titulo">Crear un servidor</h1>
+            <p>Sube una imagen</p>
+            <div class="subir-imagen-servidor">
+                <img id="imagen-servidor" src="../assets/iconos/subir_imagen.png" alt="">
+                <input id="input-img-servidor" type="file" accept="image/png, image/gif, image/jpeg">                
+            </div>
+            <div class="nombre-input">Nombre del Servidor</div>
+            <div class="caja-ingreso">
+                <input id="servidor-nombre" type="text" placeholder="nuevo-servidor">
+            </div>
+            <span class="msj-advertencia" id="msj-advertencia-servidor">Ingresa el nombre del servidor</span>
+            <div class="nombre-input">Descripcion del Servidor</div>
+            <div class="caja-ingreso">
+                <textarea id="servidor-descripcion" type="text" placeholder="descripcion-servidor"></textarea>
+            </div>
+            <div class="seccion-botones-canal">
+                <button id="crear-servidor"class="boton-modal modal-agregar">Crear Servidor</button>
+                <button id="cerrar-modal-servidor" class="boton-modal modal-cerrar">Cancelar</button>
+            </div>
+        </div>
+    </section>
+
+<script src="../scripts/home/estilo_seleccion_servidor.js"></script>
+<script src="../scripts/home/cargar_info_servidores.js"></script>
+<script src="../scripts/home/comprobar_estado_componentes.js"></script>
+<script src="../scripts/home/carga_incial.js"></script>
+<script src="../scripts/home/cambiar-canales.js"></script>
+<script src="../scripts/home/editar_eliminar_mensajes.js"></script>
+<script src="../scripts/home/modales.js"></script>
+<script src="../scripts/home/desplegar_canales.js"></script>
+<script src="../scripts/home/input_enviar.js"></script>
+<script src="../scripts/home/menu_contextuales.js"></script>
+</body>
+</html>

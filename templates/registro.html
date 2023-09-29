@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="../styles/login/login.css">
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+            <h1 class="title">Crear una cuenta</h1>
+            <form action="" id="formulario" class="form">
+
+                <label for="input_email" class="label">Correo Electronico</label>
+                <input type="email"  class="input" id="input_email" name="input_email" required>
+
+                <label for="input_nickname" class="label">Nombre de Usuario</label>
+                <input type="text"  class="input" id="input_nickname" name="input_nickname" required>
+
+                <label for="input_name" class="label">Nombre</label>
+                <input type="text"  class="input" id="input_name" name="input_nombre" required>
+
+                <label for="input_apellido" class="label">Apellido</label>
+                <input type="text"  class="input" id="input_apellido" name="input_apellido" required>
+            
+                <label for="input_contrasenia" class="label">Contraseña</label>
+                <input type="password" class="input"  id="input_contrasenia" name="input_contrasenia" required>
+
+                <label>Fecha de nacimiento</label>
+                <input type="date" class="input" id="input-fecha" name="input_fecha">
+            
+                <button id="btn_registrar" class="boton boton-inicio-session">Confirmar</button>
+                
+            </form>
+            <div id="message" class="message-error"></div>
+        </div>
+        
+    </div>
+    <script>
+        const formulario = document.getElementById("formulario");
+        const btn_registrar = document.getElementById("btn_registrar")   
+
+        btn_registrar.addEventListener("click",(e)=>{
+            e.preventDefault();
+            registrar()
+        })
+
+        function registrar(){
+            let datosLogin = new FormData(formulario);
+            const data = {
+                email : datosLogin.get("input_email"),
+                contrasenia : datosLogin.get("input_contrasenia"), 
+                nombre : datosLogin.get("input_nombre"), 
+                apellido : datosLogin.get("input_apellido"), 
+                fecha_nac : datosLogin.get("input_fecha"), 
+                nickname : datosLogin.get("input_nickname")
+            };
+            fetch("http://127.0.0.1:5000/usuario/register", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => {
+                if (response.status === 201) {
+                    // Redirect to profile page if login is successful
+                    return response.json().then(data => {
+                        //window.location.href = "templates/login.html";
+                        document.getElementById("message").innerHTML = data.message;
+                    });
+                } else {
+                    return response.json().then(data => {
+                        document.getElementById("message").innerHTML = data.error.description;
+                    });
+                }
+            })
+            .catch(error => {
+                document.getElementById("message").innerHTML = "An error occurred.";
+            });
+        }
+
+
+    </script>
+</body>
+</html>

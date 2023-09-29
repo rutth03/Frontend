@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../styles/login/login.css">
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+            <h1 class="title">Iniciar Sesion</h1>
+            <form action="" id="formulario" class="form">
+                <label for="input_nickname_email" class="label">Usuario</label>
+                <input type="text"  class="input" id="input_nickname_email" name="input_nickname_email" 
+                placeholder="Usuario / Correo Electronico" required>
+            
+                <label for="input_contrasenia" class="label">Contraseña</label>
+                <input type="password" class="input"  id="input_contrasenia" name="input_contrasenia" placeholder="Contraseña" required>
+            
+                <button id="btn_login" class="boton boton-inicio-session">Iniciar Sesión</button>
+                <p class="registrarse">¿No tienes una cuenta? <a href="registro.html">Registrarse</a></p>
+                
+            </form>
+            <div id="message" class="message-error"></div>
+        </div>
+        
+    </div>
+    <script src="../scripts/login/login.js"></script>
+</body>
+</html>

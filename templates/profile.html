@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="../styles/profile/perfil.css">
+</head>
+<body>
+    <header>
+        <div>
+            Logo
+        </div>
+        <div>
+            <nav class="nav">
+                <ul class="nav-ul">
+                    <li class="nav-item"><a href="home.html">Home</a></li>
+                    <li class="nav-item"><a onclick="cerrarSesion()" href="login.html">Cerrar Sesion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main-container">
+        <div class="perfil-container">
+            <div class="articles-container">
+                <article id="info-perfil" style="display: block">
+                    <p>Información básica:</p>
+                    <form action="" id="form-perfil" class="form">
+    
+                        <label for="input_nickname" class="label">Nombre de Usuario</label>
+                        <input type="text"  class="input" id="input_nickname" name="input_nickname" 
+                        readonly required="true">
+        
+                        <label for="input_nombre" class="label">Nombre</label>
+                        <input type="text"  class="input" id="input_nombre" name="input_nombre" 
+                        readonly required="true">
+        
+                        <label for="input_apellido" class="label">Apellido</label>
+                        <input type="text"  class="input" id="input_apellido" name="input_apellido" 
+                        readonly required="true">
+        
+                        <label>Fecha de nacimiento</label>
+                        <input type="date" class="input" id="input_fecha" name="input_fecha"
+                        readonly required="true">
+                        
+                        <div>
+                            <button id="btn_guardar_perfil" class="boton boton-guardar" style="display: none">Guardar Cambios</button>
+                            <button id="btn_editar_perfil" class="boton boton-editar">Editar</button>
+                            <button id="btn_cancelar_perfil" class="boton boton-cancelar" style="display: none">Cancelar</button>
+                        </div>
+                         
+                    </form>
+                    <div id="message_error_perfil" class="message-error"></div>
+                </article>
+                <article id="info-seguridad" style="display: none;">
+                    <p>Cambiar datos de Seguridad:</p>
+                    <form action="" id="form-seguridad" class="form">
+    
+                        <label for="input_email" class="label">Email</label>
+                        <input type="text"  class="input" id="input_email" name="input_email"
+                         readonly>
+        
+                        <label for="input_contrasenia" class="label">Contraseña actual</label>
+                        <input type="password"  class="input" id="input_contrasenia" name="input_contrasenia"
+                         readonly>
+                        
+                        <label for="input_contrasenia_nueva" class="label">Contraseña nueva</label>
+                        <input type="password"  class="input" id="input_contrasenia_nueva" name="input_contrasenia_nueva"
+                         readonly>
+
+                        <label for="input_contrasenia_con" class="label">Confirmar contraseña nueva</label>
+                        <input type="password"  class="input" id="input_contrasenia_conf" name="input_contrasenia_conf"
+                         readonly>
+
+                        <div>
+                            <button id="btn_guardar_seg" class="boton boton-guardar" style="display: none">Guardar Cambios</button>
+                            <button id="btn_editar_seg" class="boton boton-editar">Editar</button>
+                            <button id="btn_cancelar_seg" class="boton boton-cancelar" style="display: none">Cancelar</button>
+                        </div>
+                    </form>
+                    <div id="message_error_seg" class="message-error"></div>
+                </article>
+
+                <article id="info-imagen-profile" style="display: none;">
+                    <div class="contenedor-foto">
+                        <img src="/assets/avatares/imagen1.png" alt="">
+                    </div>
+                    <form action="" id="form-imagen" class="form">
+                        <label for="input_imagen" class="label">Selecciona una imagen</label>
+                        <input type="file"  class="input-foto" id="input_imagen" name="input_imagen" required>
+                    </fomr>
+                </article>
+                
+            </div>
+            <div class="aside-container">
+                <div class="contenedor-imagen">
+                    <img src="../assets/avatares/imagen1.png" alt="">
+                    <p>Nombre  Usuario</p>
+                </div>
+                <div class="item-container">
+                    <ul class="item-container-list">
+                        <li id="li_perfil" class="item-list item-selected" onclick="seleccionar_item(this)"><a href="#info-perfil">Mi Perfil</a></li>
+                        
+                        <li id="li_foto" class="item-list" onclick="seleccionar_item(this)"><a href="#info-imagen-profile">Fotografia</a></li>
+
+                        <li id="li_seguridad" class="item-list" onclick="seleccionar_item(this)"><a href="#info-seguridad">Seguridad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cabecera-container">
+                    <h1 id="titulo-cabecera">Mi Perfil</h1>
+                    <p id="descripcion-cabecera">Modificar Informacion Básica</p>
+            </div>
+        </div>  
+        
+    </main>
+    <script src="../scripts/profile/profile.js"></script>
+    <script src="../scripts/profile/aside.js"></script>
+    <script src="../scripts/profile/botones_profile.js"></script>
+</body>
+</html>
