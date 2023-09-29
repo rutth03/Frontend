@@ -1,0 +1,22 @@
+:root{
+    --color-fondo-principal:purple;
+    --color-fondo-secundario: purple;
+    --color-fondo-claro: white;
+
+    --color-fondo-input: white;
+    --color-boton-primario:black;
+    --color-boton-secundario: purple;
+    --color-boton-terciario: purple;
+    --color-boton-cuatro: purple;
+
+    --fuente-carteles:'Open Sans', sans-serif; 
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    color: white;
+}
+
+

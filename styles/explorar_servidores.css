@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: purple;
+}
+main{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main > *{
+    margin-top: 50px;
+}
+main h1{
+    text-align: center;
+}
+.buscador-servidores{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.buscador-servidores input{
+    width: 50% ;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    
+}
+.buscador-servidores button{
+    margin-left: 5px;
+    width: 50px;
+    background-color: blue;
+    border:1px solid white;
+    border-radius: 5px;
+}
+.buscador-servidores button:hover{
+    background-color: white;
+    color: blue;
+    cursor: pointer;
+}
+
+.resultado-servidores{
+    width: 50%;
+    height: 65%;
+    padding: 10px;
+    overflow:auto;
+}
+.servidor-encontrado{
+    display: flex;
+    height: 20%;
+    border-radius: 5px;
+    background-color: blue;
+    justify-content: space-between;    
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.servidor-imagen{
+    width: 15%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.servidor-imagen img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.info-servidor{
+    width: 65%;
+}
+.info-servidor h2{
+    text-align: start;
+    margin-bottom: 5px;
+}
+.descripcion-servidor{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.boton-ingresar-servidor{
+    width: 10%;
+    height: 50px;
+    align-self: center;
+    background-color: blue;
+    border:1px solid white;
+    border-radius: 5px;
+}
+.boton-ingresar-servidor:hover{
+    background-color: white;
+    align-self: center;
+    color: blue;
+    cursor: pointer;
+}
+.volver-home{
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.contenedor-back{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+.contenedor-back img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.volver-home p:hover{
+    color: blue;
+}

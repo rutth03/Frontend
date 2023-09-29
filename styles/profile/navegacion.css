@@ -1,0 +1,32 @@
+header{
+    display: flex;
+    height: 10vh;
+    background-color: var(--color-fondo-principal);
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 2px 2px 2px white;
+}
+
+.nav-ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav-item{
+    margin-right: 10px;
+    height: 100%;
+    padding: 10px;
+}
+
+
+.nav-item a:hover{
+    color: blue;
+    border-bottom: 4px solid #c0d6f5;
+    font-weight: bold;
+}
+
+.nav-item a{
+    text-decoration: none;
+    padding: 5px;
+}

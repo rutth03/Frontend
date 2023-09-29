@@ -1,0 +1,70 @@
+/*Estilos botones*/
+
+.boton{
+    padding: 0.5em 2em;
+    border: 1px solid;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+    border:none;
+    cursor: pointer;
+    font-weight: bold;
+    
+}
+.boton:hover{
+    color: blue;
+    background-color: white;
+}
+.boton-guardar{    
+    color: white;
+    background-color: blue;
+}
+.boton-guardar:hover{  
+    background-color: white;
+    color: blue;
+}
+.boton-cerrar{
+    color: white;
+    background-color: red;
+    margin-left: 5px;
+}
+.boton-cerrar:hover{
+    color: red;
+    background-color: white;
+}
+
+.boton-editar{
+    color: white;
+    background-color: green;
+    margin-left: 5px;
+}
+.boton-editar:hover{
+    color: green;
+    background-color: white;
+}
+
+.boton-cancelar{
+    color: white;
+    background-color: red;
+    margin-left: 5px;
+}
+.boton-cancelar:hover{
+    color: red;
+    background-color: white;
+}
+
+
+.boton-inicio-session{
+    color: white;
+    background-color: blue;
+    margin: 5px;
+
+    font-size: 1rem;
+}
+.boton-inicio-session:hover{
+    color: blue;
+    background-color: white;
+}
+
+

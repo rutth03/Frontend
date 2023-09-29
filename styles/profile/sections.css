@@ -1,0 +1,76 @@
+.articles-container{
+
+    display: grid;
+    grid-area: section;
+    grid-template-rows: auto 1fr auto;
+    width: 75%;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+.form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.label{
+    margin-bottom: 10px;
+}
+
+.input{
+    background-color: var(--color-fondo-input);
+    border: none;
+    height: 30px;
+    padding: 6px;
+    margin-bottom: 12px;
+    font-size: 1em;
+    color: black;
+}
+
+.contenedor-foto{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--color-fondo-input);
+}
+.input-foto{
+    text-align: center;
+    background-color: var(--color-fondo-input);
+    border: none;
+    height: 30px;
+    padding: 6px;
+    margin-bottom: 12px;
+    font-size: 1em;
+    color: black;
+}
+
+.boton-primario{
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    height: 30px;
+    margin-bottom: 12px;
+    background-color: var(--color-fondo-principal);
+    font-size: 1em;
+}
+
+.boton-primario:hover{
+    background-color: var(--color-boton-secundario);
+    color: black;
+    border: 3px solid var(--color-fondo-principal);
+}
+
+.registrarse{
+    text-align: center;
+}
+.message-error{
+    text-align: center;
+}
+

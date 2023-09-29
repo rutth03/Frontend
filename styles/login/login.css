@@ -1,0 +1,89 @@
+@import url(../variables.css);
+@import url(../botones.css);
+
+
+body{
+    background: linear-gradient(purple, purple);
+}
+.login{
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    place-items: center;
+    position: relative;
+    
+}
+
+.image-izquierda{
+    position: absolute;
+    left:0;
+    z-index: -1;
+    width: 400px;
+}
+
+.image-derecha{
+    position: absolute;
+    right:0;
+    z-index: -1;
+    width: 400px;
+}
+
+.form-container{
+    box-shadow: 0px 0px 0px 2px white;
+    background-color: purple;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 40%;
+    border-radius: 20px;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.label{
+    margin-bottom: 10px;
+}
+
+.input{
+    background-color: var(--color-fondo-input);
+    border: none;
+    border-radius: 8px;
+    height: 30px;
+    padding: 6px;
+    margin-bottom: 12px;
+    font-size: 1em;
+    color: black;
+}
+
+.boton-primario{
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    height: 30px;
+    margin-bottom: 12px;
+    background-color: var(--color-boton-terciario);
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.boton-primario:hover{
+    background-color: var(--color-boton-cuatro);
+    border: 3px solid var(--color-fondo-principal);
+}
+
+.registrarse{
+    text-align: center;
+}
+.message-error{
+    text-align: center;
+}

@@ -1,0 +1,64 @@
+@import url(../variables.css);
+@import url(./sections.css);
+@import url(./aside.css);
+@import url(./navegacion.css);
+@import url(../botones.css);
+body{
+    background: linear-gradient(blue,black);
+}
+
+.main-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    height: 87vh;
+    position: relative;
+}
+
+
+.perfil-container{
+    background-color: var(--color-fondo-principal);
+    box-shadow: 0px 0px 0px 2px purple;
+    border: 1px solid white;
+    display: grid;
+    height: 90%;
+    width: 60%;
+    place-items: center;
+    position: relative;
+    grid-template-columns: 0.5fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1.5fr;
+    grid-template-areas:
+    'side cabecero cabecero'
+    'side section section';
+}
+
+.image-izquierda{
+    position: absolute;
+    left:0;
+    z-index: -1;
+    width: 400px;
+}
+
+.image-derecha{
+    position: absolute;
+    right:0;
+    z-index: -1;
+    width: 400px;
+}
+
+
+.aside-container{
+    grid-area: side;
+    border-right: 1px solid white;
+    width: 100%;
+    height: 100%;
+}
+
+.cabecera-container{
+    grid-area: cabecero;
+    border-bottom: 1px solid white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+}
